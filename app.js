@@ -18,6 +18,10 @@ app.get("/blogs", (req, res) => {
     res.sendFile(path.join(__dirname, '/views/blogs.html'))
 })
 
+app.get("/create", (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/create_blog.html'))
+})
+
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, '/views/404.html')) 
 })
