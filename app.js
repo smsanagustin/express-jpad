@@ -8,7 +8,7 @@ app.listen(3000, () => {
 })
 
 app.use(express.urlencoded( { extended: true }));
-app.use(blogRoutes);
+app.use('/blogs', blogRoutes);
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, '/views/index.html'))
