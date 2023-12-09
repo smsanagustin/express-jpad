@@ -24,6 +24,10 @@ app.post('/blogs', (req, res) => {
     console.log(req.body)
 })
 
+app.get('/blogs/:blogid', (req, res) => {
+    res.send(req.params.blogid)
+})
+
 app.get("/create", (req, res) => {
     res.sendFile(path.join(__dirname, '/views/create_blog.html'))
 })
